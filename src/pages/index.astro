@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const portfolioEntries = await Astro.glob("./portfolio/*/index.md");
+---
+
+<Layout title="Welcome to Astro.">
+    <section>landing page / portfolio</section>
+    <ul>
+        {
+            portfolioEntries.map((entry) => (
+                <li>
+                    <a href={entry.url}>{entry.frontmatter.title}</a>
+                </li>
+            ))
+        }
+    </ul>
+</Layout>
