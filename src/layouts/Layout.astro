@@ -1,9 +1,9 @@
 ---
 export interface Props {
-    title: string;
+    title?: string;
 }
 
-const { title } = Astro.props;
+const { title = "saturn - an astro photography template" } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -16,11 +16,11 @@ const { title } = Astro.props;
         <title>{title}</title>
     </head>
     <body>
-        <header class="flex flex-col w-full pt-8">
+        <header class="flex flex-col w-full pt-8 mb-8">
             <h1 class="text-center text-4xl font-black">saturn</h1>
             <nav class="flex justify-between m-auto w-full md:w-96">
-                <a href="#">portfolio</a>
-                <a href="#">contact</a>
+                <a href="/">portfolio</a>
+                <a href="/contact">contact</a>
             </nav>
         </header>
         <main>

@@ -1,6 +1,6 @@
 ---
 title: water
-layout: "@/layouts/Layout.astro"
+layout: "@/layouts/PortfolioPageLayout.astro"
 ---
 
 water

@@ -1,6 +1,6 @@
 ---
 title: fire
-layout: "@/layouts/Layout.astro"
+layout: "@/layouts/PortfolioPageLayout.astro"
 ---
 
 fire

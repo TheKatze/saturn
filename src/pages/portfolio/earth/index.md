@@ -1,6 +1,6 @@
 ---
 title: earth
-layout: "@/layouts/Layout.astro"
+layout: "@/layouts/PortfolioPageLayout.astro"
 ---
 
 earth

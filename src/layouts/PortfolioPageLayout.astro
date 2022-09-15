@@ -1,0 +1,34 @@
+---
+import { Picture } from "@astrojs/image/components";
+import Layout from "./Layout.astro";
+
+const { frontmatter } = Astro.props;
+
+// this isnt optimal but Astro.glob only accepts string literals
+const allPictures = await Astro.glob("/**/pictures/*.jpg");
+const pictures = allPictures
+    .map((x) => x.default as ImageMetadata)
+    .filter((x) => x.src.includes(frontmatter.url));
+---
+
+<Layout>
+    <section class="max-w-lg m-auto">
+        <h2 class="text-4xl font-black mb-4">
+            {frontmatter.title}
+        </h2>
+        <slot />
+    </section>
+    <section>
+        {
+            pictures.map((x) => (
+                <Picture
+                    src={x}
+                    alt=""
+                    widths={[300, 600]}
+                    aspectRatio={undefined}
+                    sizes=""
+                />
+            ))
+        }
+    </section>
+</Layout>

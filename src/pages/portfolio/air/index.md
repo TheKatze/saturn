@@ -1,6 +1,6 @@
 ---
 title: air
-layout: "@/layouts/Layout.astro"
+layout: "@/layouts/PortfolioPageLayout.astro"
 ---
 
 air
